@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import CountdownTimer from "../Components/CountdownTimer/CountdownTimer";
+import SalaryCalculator from "../Components/SalaryCalculator/SalaryCalculator";
 
-const CountdownPage = (props) => {
+const SalaryCalcPage = (props) => {
     return (
         <div>
             <button className="btn btn-info mt-5 mx-5"><Link to ="/">Kembali</Link></button>
-            <CountdownTimer {...props}/>
+            <SalaryCalculator {...props}/>
         </div>
     );
 };
 
-export default CountdownPage
+export default SalaryCalcPage

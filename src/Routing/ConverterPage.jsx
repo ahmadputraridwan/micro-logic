@@ -4,7 +4,7 @@ import KonversiMataUang from "../Components/CurrencyConverter/CurrencyConverter"
 const ConverterPage = (props) => {
     return (
         <div>
-            <button><Link to ="/">Kembali</Link></button>
+            <button className="btn btn-info mt-5 mx-5"><Link to ="/">Kembali</Link></button>
             <KonversiMataUang {...props}/>
         </div>
     );

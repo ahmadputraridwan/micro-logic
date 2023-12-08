@@ -31,46 +31,69 @@ const KonversiMataUang = () => {
     };
 
     return (
-        <div>
-            <h1>Konversi Mata Uang</h1>
-            <div>
-                <label>
-                    Masukan Jumlah:
-                    <input type="number" value={jumlah} onChange={(e) => setJumlah(e.target.value)} />
-                </label>
+        <div className="container mt-5">
+            <h1 className="mb-4 text-center">Konversi Mata Uang</h1>
+            <div className="card text-center container" style={{width: '18rem'}}>
+                <div className="card-body">
+                    <div className="form-group">
+                        <label htmlFor="mataUangDari">Mata Uang Dari:</label>
+                        <select
+                            className="form-control my-2"
+                            id="mataUangDari"
+                            value={mataUangDari}
+                            onChange={(e) => setMataUangDari(e.target.value)}
+                        >
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="JPY">JPY</option>
+                            <option value="IDR">IDR</option>
+                            <option value="KRW">KRW</option>
+                            <option value="SGD">SGD</option>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="mataUangKedua">Ke Mata Uang:</label>
+                        <select
+                            className="form-control my-2"
+                            id="mataUangKedua"
+                            value={mataUangKedua}
+                            onChange={(e) => setMataUangKedua(e.target.value)}
+                        >
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="JPY">JPY</option>
+                            <option value="IDR">IDR</option>
+                            <option value="KRW">KRW</option>
+                            <option value="SGD">SGD</option>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="jumlah">Jumlah:</label>
+                        <input
+                            type="number"
+                            className="form-control my-2"
+                            id="jumlah"
+                            value={jumlah}
+                            onChange={(e) => setJumlah(e.target.value)}
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        className="btn btn-primary m-3"
+                        onClick={konversiUang}
+                    >
+                        Konversi
+                    </button>
+                </div>
+                <div className="card-body">
+                    <h2>Jumlah Konversi:</h2>
+                    <p className="card-text">{jumlahKonversi}</p>
+                </div>
             </div>
-            <div>
-                <label>
-                    Mata Uang Dari:
-                    <select value={mataUangDari} onChange={(e) => setMataUangDari(e.target.value)}>
-                        {Object.keys(konversiTarif).map((mataUang) => (
-                            <option key={mataUang} value={mataUang}>
-                                {mataUang}
-                            </option>
-                        ))}
-                    </select>
-                </label>
-            </div>
-            <div>
-                <label>
-                    Mata Uang Kedua:
-                    <select value={mataUangKedua} onChange={(e) => setMataUangKedua(e.target.value)}>
-                        {Object.keys(konversiTarif).map((mataUang) => (
-                            <option key={mataUang} value={mataUang}>
-                                {mataUang}
-                            </option>
-                        ))}
-                    </select>
-                </label>
-            </div>
-            <div>
-                <button onClick={konversiUang}>Konversi</button>
-            </div>
-            {jumlahKonversi !== null && (
-                <p>
-                    {jumlah} {mataUangDari} = {jumlahKonversi} {mataUangKedua}.
-                </p>
-            )}
         </div>
     );
 };

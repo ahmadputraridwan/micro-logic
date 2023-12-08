@@ -67,30 +67,41 @@ const CountdownTimer = () => {
     };
 
     return (
-        <div>
-            <h1>Countdown Timer</h1>
-            <div>
-                <label>
-                    Set Tanggal dan Waktu:
-                    <br />
-                    <input type="datetime-local"
-                           value={tanggal}
-                           onChange={handleTanggalWaktuChange} />
-                </label>
+        <div className="container mt-5">
+            <h1 className="mb-4 text-center">Countdown Timer</h1>
+            <div className="card text-center container" style={{width: '18rem'}}>
+                <div className="card-body">
+                    <div className="mb-3">
+                        <label className="form-label">
+                            Tanggal dan Waktu:
+                            <input
+                                type="datetime-local"
+                                className="form-control"
+                                value={tanggal}
+                                onChange={handleTanggalWaktuChange}
+                            />
+                        </label>
+                    </div>
+                    <div className="mb-3">
+                        <button
+                            className="btn btn-primary me-2"
+                            onClick={handleStartClick}
+                            disabled={menghitung}
+                        >
+                            Mulai
+                        </button>
+                        <button
+                            className="btn btn-secondary"
+                            onClick={handleResetClick}
+                            disabled={!menghitung}
+                        >
+                            Reset
+                        </button>
+                    </div>
+                    <p className="card-text">Waktu yang tersisa:</p>
+                    <p className="card-text">{formatWaktu(waktu)}</p>
+                </div>
             </div>
-            <div>
-                {menghitung ? ( 
-                <button disabled>Menghitung...</button>
-                ) : (
-                    <>
-                    <button onClick={handleStartClick}>Mulai</button>
-                    </>
-                )}                
-                {aktif && <button onClick={handleResetClick}>Reset</button>}
-            </div>
-            <p>Waktu yang tersisa: 
-                <br />
-                {formatWaktu(waktu)}</p>
         </div>
     );
     
