@@ -6,7 +6,7 @@ const HomePage = () => {
             <div className="jumbotron">
                 <h1 className="display-4 text-center">Challenge Task</h1>
                 <p className="lead text-center">
-                Aplikasi ini merupakan contoh implementasi React dengan beberapa fitur seperti Countdown Timer, Currency Converter, Salary Calculator, dan Word Scramble.
+                Aplikasi ini merupakan contoh implementasi React dengan beberapa fitur seperti Countdown Timer, Currency Converter, Salary Calculator,TicTacToe dan Word Scramble.
                 </p>
                 <hr className="my-4"/>
                 <p>
