@@ -22,6 +22,12 @@ const HomePage = () => {
                     <Link className="btn btn-dark btn-lg m-2" to="/tictactoe" role="button">
                     TicTacToe
                     </Link>
+                    <Link className="btn btn-dark btn-lg m-2" to="/salary" role="button">
+                    Salary Calculator
+                    </Link>
+                    <Link className="btn btn-dark btn-lg m-2" to="/wordscramble" role="button">
+                    Word Scramble
+                    </Link>
                   
                 </p>
             </div>

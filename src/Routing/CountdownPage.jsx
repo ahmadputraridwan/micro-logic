@@ -4,7 +4,7 @@ import CountdownTimer from "../Components/CountdownTimer/CountdownTimer";
 const CountdownPage = (props) => {
     return (
         <div>
-            <button className="btn btn-info mt-5 mx-5"><Link to ="/">Kembali</Link></button>
+            <button className="btn btn-dark mt-5 mx-5"><Link to ="/">Kembali</Link></button>
             <CountdownTimer {...props}/>
         </div>
     );

@@ -84,7 +84,7 @@ const CountdownTimer = () => {
                     </div>
                     <div className="mb-3">
                         <button
-                            className="btn btn-primary me-2"
+                            className="btn btn-dark me-2"
                             onClick={handleStartClick}
                             disabled={menghitung}
                         >

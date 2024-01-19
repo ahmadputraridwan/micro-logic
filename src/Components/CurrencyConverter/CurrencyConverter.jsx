@@ -83,7 +83,7 @@ const KonversiMataUang = () => {
                     </div>
                     <button
                         type="button"
-                        className="btn btn-primary m-3"
+                        className="btn btn-dark m-3"
                         onClick={konversiUang}
                     >
                         Konversi
